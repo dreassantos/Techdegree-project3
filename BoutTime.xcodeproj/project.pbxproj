@@ -63,6 +63,7 @@
 		659161B722183735007AB799 /* Ferrari-250-GT-Berlinetta-SWB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A322183735007AB799 /* Ferrari-250-GT-Berlinetta-SWB.jpg */; };
 		659161B822183735007AB799 /* 1948-Tucker-Torpedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A422183735007AB799 /* 1948-Tucker-Torpedo.jpg */; };
 		659161B922183735007AB799 /* 1967-Pontiac-GTO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */; };
+		65C4DAA422189FB800561940 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4DAA322189FB800561940 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		659161A322183735007AB799 /* Ferrari-250-GT-Berlinetta-SWB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ferrari-250-GT-Berlinetta-SWB.jpg"; sourceTree = "<group>"; };
 		659161A422183735007AB799 /* 1948-Tucker-Torpedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1948-Tucker-Torpedo.jpg"; sourceTree = "<group>"; };
 		659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1967-Pontiac-GTO.jpg"; sourceTree = "<group>"; };
+		65C4DAA322189FB800561940 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				652C4F2D220D49A8008C67DF /* LaunchScreen.storyboard */,
 				652C4F28220D49A6008C67DF /* Main.storyboard */,
 				652C4F26220D49A6008C67DF /* ViewController.swift */,
+				65C4DAA322189FB800561940 /* ResultViewController.swift */,
 				652C4F6E220D4AF9008C67DF /* HistoricalCarProvider.swift */,
 				652C4F24220D49A6008C67DF /* AppDelegate.swift */,
 				652C4F30220D49A8008C67DF /* Info.plist */,
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C4DAA422189FB800561940 /* ResultViewController.swift in Sources */,
 				652C4F27220D49A6008C67DF /* ViewController.swift in Sources */,
 				652C4F77221024DB008C67DF /* GameManager.swift in Sources */,
 				652C4F25220D49A6008C67DF /* AppDelegate.swift in Sources */,

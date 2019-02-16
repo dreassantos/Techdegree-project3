@@ -126,14 +126,14 @@ class GameManager {
         }
     }
     
-    func checkGameOver() -> (status: Bool, Score: Int, roundsPerGame: Int) {
+    func checkGameOver() -> Bool {
         round += 1
-        if (round == roundsPerGame) {
-            indexOfUsedOption.removeAll()
-            round = 1
-            return (true , roundsCorrect, roundsPerGame) 
-        } else {
-            return (false, roundsCorrect, roundsPerGame)
-        }
+        var status = false
+        (round == roundsPerGame) ? (status = true) : (status = false)
+        return status
+    }
+    
+    func getResult() -> String {
+        return ("\(roundsCorrect) / \(roundsPerGame)")
     }
 }

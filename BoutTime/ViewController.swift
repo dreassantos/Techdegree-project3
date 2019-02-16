@@ -21,10 +21,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var imagePopUpView: UIView!
     @IBOutlet weak var popUpImage: UIImageView!
     @IBOutlet weak var imagePopUpCloseButton: UIButton!
-    //result screen
-    @IBOutlet var resultView: UIView!
-    @IBOutlet weak var playAgainButton: UIButton!
-    @IBOutlet weak var userScoreLabel: UILabel!
     //Question Navigation Buttons
     @IBOutlet var navButtons: [UIButton]!
     //Option "Buttons"
@@ -48,6 +44,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.imagePopUpView.layer.cornerRadius = 10
         newRound()
     }
+
     
     //resource https://developer.apple.com/documentation/uikit/uiresponder/1621120-motionbegan
     override func motionBegan(_ motion: UIEvent.EventSubtype,with event: UIEvent?) {
@@ -73,7 +70,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //Hide some of the buttons
         buttonEnabled(buttonsArray: optionButtons,status: false)
         buttonEnabled(buttonsArray: navButtons, status: true)
-        playAgainButton.isHidden = true
+        //playAgainButton.isHidden = true
         nextRoundButton[0].isHidden = true
         nextRoundButton[1].isHidden = true
         //Start/Restart the timer
@@ -125,14 +122,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         buttonEnabled(buttonsArray: navButtons, status: false)
         checkResults()
     }
-    func endGame(userScore: Int, roundsPerGame: Int) {
-        playAgainButton.isHidden = false
-        userScoreLabel.text = "\(userScore/roundsPerGame)"
-        self.view.addSubview(resultView)
-        resultView.center = self.view.center
-        resultView.frame = self.view.bounds
-        
-        //imagePopUpView.center = self.view.center
+    //This is ran before the segue is actioned
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let result = gameManager.getResult()
+        let destionationVC: ResultViewController = segue.destination as! ResultViewController
+        destionationVC.userScoreFromFirstView = result
     }
 
     func checkResults() {
@@ -225,7 +219,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func nextRound(_ sender: UIButton) {
         let gameOver = gameManager.checkGameOver()
-        gameOver.status ? endGame(userScore: gameOver.Score, roundsPerGame: gameOver.roundsPerGame) : newRound()
+        gameOver ? (performSegue(withIdentifier: "resultViewSegue", sender: self)) : newRound()
     }
 
     @IBAction func showMoreInfoScreen(_ sender: UIButton) {
@@ -241,10 +235,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    @IBAction func playAgain(_ sender: UIButton) {
-        self.resultView.removeFromSuperview()
-        newRound()
-    }
+//    @IBAction func playAgain(_ sender: UIButton) {
+//        //self.resultView.removeFromSuperview()
+//        newRound()
+//    }
 }
 
 
