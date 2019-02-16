@@ -36,13 +36,14 @@
                                                     <action selector="imagePopOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVG-ez-3I4"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-PY-84r" userLabel="option1Button">
+                                            <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-PY-84r" userLabel="option1Button">
                                                 <rect key="frame" x="100" y="0.0" width="200" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Ogv-FW-4Db"/>
                                                     <constraint firstAttribute="width" constant="200" id="cNI-kE-fMR"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                                 <state key="normal" title="Option 1 Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -80,13 +81,14 @@
                                                     <action selector="imagePopOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGb-wy-sGt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-BF-xzd" userLabel="option2Button">
+                                            <button opaque="NO" tag="5" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8kk-BF-xzd" userLabel="option2Button">
                                                 <rect key="frame" x="100" y="0.0" width="200" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="ens-UO-aWm"/>
                                                     <constraint firstAttribute="height" constant="100" id="fxQ-3j-iZg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                                 <state key="normal" title="option 2 button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -137,13 +139,14 @@
                                                     <action selector="imagePopOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5UM-YZ-RDR"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rFw-9o-yy8">
+                                            <button opaque="NO" tag="6" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rFw-9o-yy8">
                                                 <rect key="frame" x="100" y="0.0" width="200" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="5Vq-VY-ZYw"/>
                                                     <constraint firstAttribute="width" constant="200" id="qeU-q8-prg"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                                 <state key="normal" title="option3 Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -194,13 +197,14 @@
                                                     <action selector="imagePopOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQf-D9-suU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Hu6-dW-P6a">
+                                            <button opaque="NO" tag="7" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Hu6-dW-P6a">
                                                 <rect key="frame" x="100" y="0.0" width="200" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="ZyY-Lq-lda"/>
                                                     <constraint firstAttribute="height" constant="100" id="rAe-o3-tO5"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
                                                 <state key="normal" title="option 4 Button">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
