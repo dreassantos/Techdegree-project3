@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="x18-Mp-d6Z">
-                                <rect key="frame" x="12" y="37" width="350" height="592"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="x18-Mp-d6Z">
+                                <rect key="frame" x="12.5" y="47.5" width="350" height="592"/>
                                 <subviews>
                                     <stackView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdi-ZJ-ULJ" userLabel="Option1">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
@@ -229,9 +229,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WH3-LQ-gBg">
                                         <rect key="frame" x="0.0" y="492" width="350" height="100"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-xy-TlM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-xy-TlM">
                                                 <rect key="frame" x="104" y="63" width="142.5" height="20.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.19842103123664856" green="0.56257271766662598" blue="0.71278852224349976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -247,9 +246,12 @@
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pm-Da-lBV" userLabel="SuccessButton">
+                                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pm-Da-lBV" userLabel="SuccessButton">
                                                 <rect key="frame" x="75" y="0.0" width="200" height="55"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="p2z-fl-6fR"/>
+                                                    <constraint firstAttribute="height" constant="55" id="uQq-Zu-wm9"/>
+                                                </constraints>
                                                 <state key="normal" title="Button" image="next_round_success.png"/>
                                                 <connections>
                                                     <action selector="nextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sxt-hM-bj6"/>
@@ -257,21 +259,31 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdY-te-iP5" userLabel="FailButton">
                                                 <rect key="frame" x="75" y="0.0" width="200" height="55"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="next_round_fail.png"/>
                                                 <connections>
                                                     <action selector="nextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzQ-MS-y5I"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9Pm-Da-lBV" secondAttribute="trailing" constant="75" id="2U6-95-w3d"/>
+                                            <constraint firstItem="9Pm-Da-lBV" firstAttribute="centerX" secondItem="WH3-LQ-gBg" secondAttribute="centerX" id="FNZ-wv-B2b"/>
+                                            <constraint firstItem="CqQ-xy-TlM" firstAttribute="top" secondItem="c2G-vm-cRh" secondAttribute="bottom" constant="8" id="MOB-Ul-i72"/>
+                                            <constraint firstItem="CqQ-xy-TlM" firstAttribute="centerX" secondItem="WH3-LQ-gBg" secondAttribute="centerX" id="RpR-Jy-Vg2"/>
+                                            <constraint firstItem="9Pm-Da-lBV" firstAttribute="leading" secondItem="WH3-LQ-gBg" secondAttribute="leading" constant="75" id="g4n-B2-Gqs"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="WH3-LQ-gBg" firstAttribute="centerX" secondItem="x18-Mp-d6Z" secondAttribute="centerX" id="XgN-Uv-tUm"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.1617171168" blue="0.29459536079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="x18-Mp-d6Z" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9WB-fM-K0g"/>
-                            <constraint firstItem="x18-Mp-d6Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hyC-fx-ghf"/>
+                            <constraint firstItem="x18-Mp-d6Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nad-qI-Mqg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

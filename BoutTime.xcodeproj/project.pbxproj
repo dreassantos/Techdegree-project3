@@ -14,24 +14,15 @@
 		652C4F2F220D49A8008C67DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F2D220D49A8008C67DF /* LaunchScreen.storyboard */; };
 		652C4F4B220D4A89008C67DF /* up_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F37220D4A88008C67DF /* up_full.png */; };
 		652C4F4C220D4A89008C67DF /* next_round_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F38220D4A88008C67DF /* next_round_fail.png */; };
-		652C4F4D220D4A89008C67DF /* icon29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F39220D4A88008C67DF /* icon29@1x.png */; };
 		652C4F4E220D4A89008C67DF /* up_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3A220D4A88008C67DF /* up_half.png */; };
 		652C4F4F220D4A89008C67DF /* down_full_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3B220D4A88008C67DF /* down_full_selected.png */; };
 		652C4F50220D4A89008C67DF /* up_half_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3C220D4A88008C67DF /* up_half_selected.png */; };
 		652C4F51220D4A89008C67DF /* down_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3D220D4A88008C67DF /* down_full.png */; };
 		652C4F52220D4A89008C67DF /* next_round_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3E220D4A88008C67DF /* next_round_success.png */; };
-		652C4F53220D4A89008C67DF /* icon87@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F3F220D4A88008C67DF /* icon87@3x.png */; };
-		652C4F54220D4A89008C67DF /* webview_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F40220D4A88008C67DF /* webview_bar.png */; };
-		652C4F55220D4A89008C67DF /* splash_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F41220D4A88008C67DF /* splash_screen.png */; };
-		652C4F56220D4A89008C67DF /* icon120@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F42220D4A88008C67DF /* icon120@3x.png */; };
 		652C4F57220D4A89008C67DF /* play_again.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F43220D4A88008C67DF /* play_again.png */; };
 		652C4F58220D4A89008C67DF /* up_full_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F44220D4A88008C67DF /* up_full_selected.png */; };
-		652C4F59220D4A89008C67DF /* icon180@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F45220D4A89008C67DF /* icon180@3x.png */; };
 		652C4F5A220D4A89008C67DF /* down_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F46220D4A89008C67DF /* down_half.png */; };
-		652C4F5B220D4A89008C67DF /* icon80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F47220D4A89008C67DF /* icon80@2x.png */; };
-		652C4F5C220D4A89008C67DF /* icon40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F48220D4A89008C67DF /* icon40@1x.png */; };
 		652C4F5D220D4A89008C67DF /* down_half_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F49220D4A89008C67DF /* down_half_selected.png */; };
-		652C4F5E220D4A89008C67DF /* icon58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F4A220D4A89008C67DF /* icon58@2x.png */; };
 		652C4F67220D4AAB008C67DF /* FordModelTtouring1925.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F60220D4AAB008C67DF /* FordModelTtouring1925.jpg */; };
 		652C4F68220D4AAB008C67DF /* 1770FardierVapeur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F61220D4AAB008C67DF /* 1770FardierVapeur.jpg */; };
 		652C4F69220D4AAB008C67DF /* DobleModelE1924.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 652C4F62220D4AAB008C67DF /* DobleModelE1924.jpeg */; };
@@ -64,6 +55,7 @@
 		659161B822183735007AB799 /* 1948-Tucker-Torpedo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A422183735007AB799 /* 1948-Tucker-Torpedo.jpg */; };
 		659161B922183735007AB799 /* 1967-Pontiac-GTO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */; };
 		65C4DAA422189FB800561940 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4DAA322189FB800561940 /* ResultViewController.swift */; };
+		65C4DAA62218C8FE00561940 /* splash_screen_HCED.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C4DAA52218C8FE00561940 /* splash_screen_HCED.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,24 +68,15 @@
 		652C4F30220D49A8008C67DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652C4F37220D4A88008C67DF /* up_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_full.png; sourceTree = "<group>"; };
 		652C4F38220D4A88008C67DF /* next_round_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_round_fail.png; sourceTree = "<group>"; };
-		652C4F39220D4A88008C67DF /* icon29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon29@1x.png"; sourceTree = "<group>"; };
 		652C4F3A220D4A88008C67DF /* up_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_half.png; sourceTree = "<group>"; };
 		652C4F3B220D4A88008C67DF /* down_full_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_full_selected.png; sourceTree = "<group>"; };
 		652C4F3C220D4A88008C67DF /* up_half_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_half_selected.png; sourceTree = "<group>"; };
 		652C4F3D220D4A88008C67DF /* down_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_full.png; sourceTree = "<group>"; };
 		652C4F3E220D4A88008C67DF /* next_round_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next_round_success.png; sourceTree = "<group>"; };
-		652C4F3F220D4A88008C67DF /* icon87@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon87@3x.png"; sourceTree = "<group>"; };
-		652C4F40220D4A88008C67DF /* webview_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webview_bar.png; sourceTree = "<group>"; };
-		652C4F41220D4A88008C67DF /* splash_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen.png; sourceTree = "<group>"; };
-		652C4F42220D4A88008C67DF /* icon120@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon120@3x.png"; sourceTree = "<group>"; };
 		652C4F43220D4A88008C67DF /* play_again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_again.png; sourceTree = "<group>"; };
 		652C4F44220D4A88008C67DF /* up_full_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_full_selected.png; sourceTree = "<group>"; };
-		652C4F45220D4A89008C67DF /* icon180@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon180@3x.png"; sourceTree = "<group>"; };
 		652C4F46220D4A89008C67DF /* down_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_half.png; sourceTree = "<group>"; };
-		652C4F47220D4A89008C67DF /* icon80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon80@2x.png"; sourceTree = "<group>"; };
-		652C4F48220D4A89008C67DF /* icon40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon40@1x.png"; sourceTree = "<group>"; };
 		652C4F49220D4A89008C67DF /* down_half_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_half_selected.png; sourceTree = "<group>"; };
-		652C4F4A220D4A89008C67DF /* icon58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon58@2x.png"; sourceTree = "<group>"; };
 		652C4F60220D4AAB008C67DF /* FordModelTtouring1925.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FordModelTtouring1925.jpg; sourceTree = "<group>"; };
 		652C4F61220D4AAB008C67DF /* 1770FardierVapeur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1770FardierVapeur.jpg; sourceTree = "<group>"; };
 		652C4F62220D4AAB008C67DF /* DobleModelE1924.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DobleModelE1924.jpeg; sourceTree = "<group>"; };
@@ -126,6 +109,7 @@
 		659161A422183735007AB799 /* 1948-Tucker-Torpedo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1948-Tucker-Torpedo.jpg"; sourceTree = "<group>"; };
 		659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1967-Pontiac-GTO.jpg"; sourceTree = "<group>"; };
 		65C4DAA322189FB800561940 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		65C4DAA52218C8FE00561940 /* splash_screen_HCED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_HCED.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,28 +160,20 @@
 		652C4F36220D4A5E008C67DF /* GameImages */ = {
 			isa = PBXGroup;
 			children = (
+				65C4DAA52218C8FE00561940 /* splash_screen_HCED.png */,
 				652C4F73220FC5BC008C67DF /* defaultImage.png */,
 				652C4F72220FC5BB008C67DF /* defaultImageLarge.png */,
 				652C4F3B220D4A88008C67DF /* down_full_selected.png */,
 				652C4F3D220D4A88008C67DF /* down_full.png */,
 				652C4F49220D4A89008C67DF /* down_half_selected.png */,
 				652C4F46220D4A89008C67DF /* down_half.png */,
-				652C4F39220D4A88008C67DF /* icon29@1x.png */,
-				652C4F48220D4A89008C67DF /* icon40@1x.png */,
-				652C4F4A220D4A89008C67DF /* icon58@2x.png */,
-				652C4F47220D4A89008C67DF /* icon80@2x.png */,
-				652C4F3F220D4A88008C67DF /* icon87@3x.png */,
-				652C4F42220D4A88008C67DF /* icon120@3x.png */,
-				652C4F45220D4A89008C67DF /* icon180@3x.png */,
 				652C4F38220D4A88008C67DF /* next_round_fail.png */,
 				652C4F3E220D4A88008C67DF /* next_round_success.png */,
 				652C4F43220D4A88008C67DF /* play_again.png */,
-				652C4F41220D4A88008C67DF /* splash_screen.png */,
 				652C4F44220D4A88008C67DF /* up_full_selected.png */,
 				652C4F37220D4A88008C67DF /* up_full.png */,
 				652C4F3C220D4A88008C67DF /* up_half_selected.png */,
 				652C4F3A220D4A88008C67DF /* up_half.png */,
-				652C4F40220D4A88008C67DF /* webview_bar.png */,
 			);
 			path = GameImages;
 			sourceTree = "<group>";
@@ -306,9 +282,8 @@
 				652C4F4E220D4A89008C67DF /* up_half.png in Resources */,
 				652C4F51220D4A89008C67DF /* down_full.png in Resources */,
 				659161B622183735007AB799 /* 1936-Bugatti-Type-57SC-Atlantic.jpg in Resources */,
-				652C4F5C220D4A89008C67DF /* icon40@1x.png in Resources */,
+				65C4DAA62218C8FE00561940 /* splash_screen_HCED.png in Resources */,
 				659161A922183735007AB799 /* Mazda-Miata.jpg in Resources */,
-				652C4F5B220D4A89008C67DF /* icon80@2x.png in Resources */,
 				659161B222183735007AB799 /* Acura-NSX.jpg in Resources */,
 				652C4F4B220D4A89008C67DF /* up_full.png in Resources */,
 				652C4F58220D4A89008C67DF /* up_full_selected.png in Resources */,
@@ -323,8 +298,6 @@
 				659161AB22183735007AB799 /* Jaguar-E-Type.jpg in Resources */,
 				659161B422183735007AB799 /* 1978BMWM1.jpg in Resources */,
 				652C4F5A220D4A89008C67DF /* down_half.png in Resources */,
-				652C4F56220D4A89008C67DF /* icon120@3x.png in Resources */,
-				652C4F55220D4A89008C67DF /* splash_screen.png in Resources */,
 				652C4F74220FC5BC008C67DF /* defaultImageLarge.png in Resources */,
 				659161B322183735007AB799 /* Aston-Martin-DB5.jpg in Resources */,
 				659161AF22183735007AB799 /* 1963-Chevrolet-Corvette-Sting-Ray-Coupe.jpg in Resources */,
@@ -334,17 +307,12 @@
 				659161AC22183735007AB799 /* Lamborghini-Countach.jpg in Resources */,
 				652C4F6A220D4AAB008C67DF /* AlfaRomeoSuperSport1929.jpg in Resources */,
 				652C4F2A220D49A6008C67DF /* Main.storyboard in Resources */,
-				652C4F54220D4A89008C67DF /* webview_bar.png in Resources */,
 				652C4F50220D4A89008C67DF /* up_half_selected.png in Resources */,
 				652C4F52220D4A89008C67DF /* next_round_success.png in Resources */,
-				652C4F59220D4A89008C67DF /* icon180@3x.png in Resources */,
 				652C4F4C220D4A89008C67DF /* next_round_fail.png in Resources */,
 				659161A822183735007AB799 /* ac-shelby-cobra.jpg in Resources */,
 				652C4F6C220D4AAB008C67DF /* StanleyWoggleBug.jpg in Resources */,
-				652C4F4D220D4A89008C67DF /* icon29@1x.png in Resources */,
-				652C4F5E220D4A89008C67DF /* icon58@2x.png in Resources */,
 				659161AE22183735007AB799 /* Volvo_P1800_1963.jpg in Resources */,
-				652C4F53220D4A89008C67DF /* icon87@3x.png in Resources */,
 				659161B122183735007AB799 /* Ford-GT40.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
