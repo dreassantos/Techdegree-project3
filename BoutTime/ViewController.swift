@@ -10,34 +10,28 @@ import UIKit
 import SafariServices
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-    
-    //Car Icon Images as buttons
-//    @IBOutlet weak var image1Button: UIButton!
-//    @IBOutlet weak var image2Button: UIButton!
-//    @IBOutlet weak var image3Button: UIButton!
-//    @IBOutlet weak var image4Button: UIButton!
-    @IBOutlet var imageButtons: [UIButton]!
     //Pop up button - to "Zoom" into icon images
     @IBOutlet var imagePopUpView: UIView!
     @IBOutlet weak var popUpImage: UIImageView!
     @IBOutlet weak var imagePopUpCloseButton: UIButton!
+    
+    //main ViewController Outlets
+    //Image buttons
+    @IBOutlet var imageButtons: [UIButton]!
+    //Option "Buttons" - used buttons so that they respond to actions.
+    @IBOutlet var optionButtons: [UIButton]!
     //Question Navigation Buttons
     @IBOutlet var navButtons: [UIButton]!
-    //Option "Buttons"
-    @IBOutlet var optionButtons: [UIButton]!
-//    @IBOutlet weak var option1Button: UIButton!
-//    @IBOutlet weak var option2Button: UIButton!
-//    @IBOutlet weak var option3Button: UIButton!
-//    @IBOutlet weak var option4Button: UIButton!
-    //next round Button
-    @IBOutlet var nextRoundButton: [UIButton]!
     //Timer label
     @IBOutlet weak var timerLabel: UILabel!
-    //saving a connection to the game manager
+    //next round Buttons
+    @IBOutlet var nextRoundButton: [UIButton]!
+    
+    //ViewController Variables
     var gameManager = GameManager()
     var currentOptionsCopy:[String] = []
     var order:[Int] = []
-    var userOrder:[String] = []
+    var userCarOrderByName:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,34 +39,20 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         newRound()
     }
 
-    
+    //Check for motion - if shake reset the timer.
     //resource https://developer.apple.com/documentation/uikit/uiresponder/1621120-motionbegan
     override func motionBegan(_ motion: UIEvent.EventSubtype,with event: UIEvent?) {
         resetTimer()
     }
-    
-    func buttonEnabled(buttonsArray: [UIButton], status: Bool ) {
-       //let options = optionButtonArray()
-        for button in buttonsArray {
-            button.isEnabled = status
-        }
-    }
-    
-//   func  navButtonsEnabled(status: Bool) {
-//        for button in navButtons {
-//            button.isEnabled = status
-//        }
-//    }
+
     
     // Game set up
     func newRound() {
         gameManager.newRound()
         //Hide some of the buttons
-        buttonEnabled(buttonsArray: optionButtons,status: false)
-        buttonEnabled(buttonsArray: navButtons, status: true)
-        //playAgainButton.isHidden = true
-        nextRoundButton[0].isHidden = true
-        nextRoundButton[1].isHidden = true
+        changeButtonProperty(buttonsArray: optionButtons, status: false, actionToDo: "disable")
+        changeButtonProperty(buttonsArray: navButtons, status: true, actionToDo: "enable")
+        changeButtonProperty(buttonsArray: nextRoundButton, status: true, actionToDo: "hide")
         //Start/Restart the timer
         if timerIsRunning == false {
             startTimer()
@@ -100,7 +80,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             let option2 = optionButtons[1].currentTitle,
             let option3 = optionButtons[2].currentTitle,
             let option4 = optionButtons[3].currentTitle {
-            userOrder = [option1,option2,option3, option4]
+            userCarOrderByName = [option1,option2,option3, option4]
             }
         setOptionIcon()
     }
@@ -118,8 +98,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     // game results
     func endRound(){
-        buttonEnabled(buttonsArray: optionButtons, status: true)
-        buttonEnabled(buttonsArray: navButtons, status: false)
+        changeButtonProperty(buttonsArray: optionButtons, status: true, actionToDo: "enable")
+        changeButtonProperty(buttonsArray: navButtons, status: false, actionToDo: "enable")
         checkResults()
     }
     //This is ran before the segue is actioned
@@ -130,8 +110,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func checkResults() {
-        print("this is the users order before it gets passed to check results \(userOrder)") // this order is correct so far
-        (gameManager.checkAnswer(usersOrder: userOrder)) ? (nextRoundButton[1].isHidden = false) : (nextRoundButton[0].isHidden = false)
+        print("this is the users order before it gets passed to check results \(userCarOrderByName)") // this order is correct so far
+        (gameManager.checkAnswer(usersOrder: userCarOrderByName)) ? (nextRoundButton[1].isHidden = false) : (nextRoundButton[0].isHidden = false)
     }
     
     //this is the web browser if the user clicks on an option.
@@ -144,6 +124,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             viewController.preferredBarTintColor = UIColor.orange
             viewController.preferredControlTintColor = UIColor.white
             present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    // Enable/ Disable buttons
+    func changeButtonProperty(buttonsArray: [UIButton], status: Bool, actionToDo: String) {
+        switch actionToDo {
+        case "enable", "disable":
+                                for button in buttonsArray {
+                                button.isEnabled = status
+                                }
+         case "hide", "show" :
+                                for button in buttonsArray {
+                                    button.isHidden = status
+                                }
+        default: print("could not preform actions on your buttons")
         }
     }
     
@@ -177,7 +172,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         timerLabel.isHidden = true
         timerIsRunning = false
     }
-    //popUp Actions
+    
+    
+    //Button Actions
+    //popUp Button Actions
     @IBAction func imagePopOver(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -191,15 +189,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         default:
             popUpImage.image = UIImage(named: "defaultImageLarge.png")
         }
-        
         self.view.addSubview(imagePopUpView)
         imagePopUpView.center = self.view.center
     }
-
+    
     @IBAction func imageCloseButton(_ sender: UIButton) {
         self.imagePopUpView.removeFromSuperview()
     }
-    
+    //ViewController Button Actions
     @IBAction func navButton(_ sender: UIButton) {
         //Switch to handle text population
         switch sender.tag {
@@ -223,7 +220,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func showMoreInfoScreen(_ sender: UIButton) {
-        let userUrlOrder = gameManager.setUrl(userOrder: userOrder)
+        let userUrlOrder = gameManager.setUrl(userOrder: userCarOrderByName)
         print(userUrlOrder)
         switch sender.tag {
         case 4: showOptionRerence(url: userUrlOrder[0])
@@ -234,11 +231,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             showOptionRerence(url: "http://google.com")
         }
     }
-    
-//    @IBAction func playAgain(_ sender: UIButton) {
-//        //self.resultView.removeFromSuperview()
-//        newRound()
-//    }
 }
 
 
