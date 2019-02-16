@@ -327,30 +327,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op5-su-HYf" userLabel="playAgainButton">
-                                <rect key="frame" x="87" y="306" width="200" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-Nm-M2s">
+                                <rect key="frame" x="104" y="150" width="167" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.2208396792" green="0.56283575299999999" blue="0.70063525439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-8W-FIi">
+                                <rect key="frame" x="129" y="201" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op5-su-HYf" userLabel="playAgainButton">
+                                <rect key="frame" x="87.5" y="306" width="200" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5Zy-iF-Epd"/>
+                                    <constraint firstAttribute="width" constant="200" id="Nc2-yS-zkl"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="play_again.png"/>
                                 <connections>
                                     <action selector="closeView:" destination="obL-5d-Kw6" eventType="touchUpInside" id="ZqD-oE-cHP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-Nm-M2s">
-                                <rect key="frame" x="104" y="150" width="167" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.2208396792" green="0.56283575299999999" blue="0.70063525439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-8W-FIi">
-                                <rect key="frame" x="129" y="201" width="117" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.1617171168" blue="0.29459536079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fxP-8W-FIi" firstAttribute="centerX" secondItem="Aid-i6-pvv" secondAttribute="centerX" id="5wh-IL-Ccr"/>
+                            <constraint firstItem="op5-su-HYf" firstAttribute="top" secondItem="fxP-8W-FIi" secondAttribute="bottom" constant="45" id="PY3-aJ-Pb4"/>
+                            <constraint firstItem="fxP-8W-FIi" firstAttribute="top" secondItem="yWW-Nm-M2s" secondAttribute="bottom" constant="8" id="Uov-8J-cZU"/>
+                            <constraint firstItem="yWW-Nm-M2s" firstAttribute="centerX" secondItem="Aid-i6-pvv" secondAttribute="centerX" id="Wnq-w1-iHR"/>
+                            <constraint firstItem="op5-su-HYf" firstAttribute="centerX" secondItem="Aid-i6-pvv" secondAttribute="centerX" id="dHf-88-sbu"/>
+                            <constraint firstItem="op5-su-HYf" firstAttribute="centerY" secondItem="Aid-i6-pvv" secondAttribute="centerY" id="wgd-2r-4P9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K7T-Dq-h3O"/>
                     </view>
                     <connections>

@@ -67,14 +67,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
   
     func setOptions (order:[Int]) {
-        for index in 0...(optionButtons.count - 1){
+        for index in 0...(optionButtons.count - 1) { //index should only go to 3
             for optionButton in optionButtons {
                 //assign the title to the matching button
                 if optionButton == optionButtons[index] {
                     optionButton.setTitle(currentOptionsCopy[order[index]], for: .normal)
-                    }
                 }
             }
+            //save the users order into a variable for later use.
+            //Q: Not sure why I couldent add this here it appends way to many times!
+            //if let option = optionButtion[index].currentTitle {
+            // userCarOrderByName.append(option)
+            //}
+        }
         //save the users order into a variable for later use.
         if  let option1 = optionButtons[0].currentTitle,
             let option2 = optionButtons[1].currentTitle,
