@@ -4,7 +4,8 @@
 //
 //  Created by Andrea on 2/7/19.
 //  Copyright © 2019 SantosAndrea. All rights reserved.
-//
+// car list: https://gearpatrol.com/2011/12/02/feature-here-to-eternity-the-50-most-iconic-cars-in-motoring-history/
+//car images from wiki and listing above
 
 import Foundation
 
@@ -109,7 +110,7 @@ struct Cars {
             carYear: 1990),
         HistoricalCar(
             carName: "DeLorean DMC-12",
-            imageName: "DeLorean-DMC-12.jpg", // Flux capacitor optional!!! <3
+            imageName: "DeLorean-DMC-12.jpg", // TODO:Get a Flux capacitor
             websiteUrl: "https://en.wikipedia.org/wiki/DMC_DeLorean",
             carYear: 1981),
         HistoricalCar(
@@ -154,8 +155,4 @@ struct Cars {
             carYear: 1970), // using the 1970's verson 240Z (240Z-280Z)
     ]
 }
-//HistoricalCar(
-//    carName: <#T##String#>,
-//    imageName: <#T##String#>,
-//    websiteUrl: <#T##String#>,
-//    carYear: <#T##Int#>),
+

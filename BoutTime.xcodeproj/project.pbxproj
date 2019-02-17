@@ -56,6 +56,7 @@
 		659161B922183735007AB799 /* 1967-Pontiac-GTO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */; };
 		65C4DAA422189FB800561940 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C4DAA322189FB800561940 /* ResultViewController.swift */; };
 		65C4DAA62218C8FE00561940 /* splash_screen_HCED.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C4DAA52218C8FE00561940 /* splash_screen_HCED.png */; };
+		65C4DAA82218CAEE00561940 /* exitBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 65C4DAA72218CAEE00561940 /* exitBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		659161A522183735007AB799 /* 1967-Pontiac-GTO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1967-Pontiac-GTO.jpg"; sourceTree = "<group>"; };
 		65C4DAA322189FB800561940 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		65C4DAA52218C8FE00561940 /* splash_screen_HCED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen_HCED.png; sourceTree = "<group>"; };
+		65C4DAA72218CAEE00561940 /* exitBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exitBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				652C4F44220D4A88008C67DF /* up_full_selected.png */,
 				652C4F37220D4A88008C67DF /* up_full.png */,
 				652C4F3C220D4A88008C67DF /* up_half_selected.png */,
+				65C4DAA72218CAEE00561940 /* exitBar.png */,
 				652C4F3A220D4A88008C67DF /* up_half.png */,
 			);
 			path = GameImages;
@@ -273,6 +276,7 @@
 				659161AD22183735007AB799 /* Maserati_3500_GT_front.jpg in Resources */,
 				652C4F6B220D4AAB008C67DF /* Bugattitype351926.jpg in Resources */,
 				652C4F2F220D49A8008C67DF /* LaunchScreen.storyboard in Resources */,
+				65C4DAA82218CAEE00561940 /* exitBar.png in Resources */,
 				659161A622183735007AB799 /* 1960-Aston-Martin-DB4-GT-Zagato.jpg in Resources */,
 				659161B922183735007AB799 /* 1967-Pontiac-GTO.jpg in Resources */,
 				652C4F5D220D4A89008C67DF /* down_half_selected.png in Resources */,

@@ -18,13 +18,19 @@ class GameManager {
     //round check
     var indexOfSelectedOption = 0
     var indexOfUsedOption:[Int] = []
-    //var questionsWrong:[String] = []
     //vars for selected questions
     var currentOptionNames:[String] = []
     var currentImageName:[UIImage] = []
     var currentCarYears:[Int] = []
     var currentWebNames:[String] = []
- 
+   
+    func newGame() {
+        print("Array of index's used this game: \(indexOfUsedOption)")
+        round = 0
+        roundsCorrect = 0
+        indexOfUsedOption.removeAll()
+        indexOfSelectedOption = 0
+    }
     
     func newRound() {
     currentOptionNames.removeAll()
@@ -57,7 +63,6 @@ class GameManager {
             if let image = UIImage(named: cars.carList[indexOfSelectedOption].imageName) {
                 currentImageName.append(image)
             } else {
-                
                 currentImageName.append(#imageLiteral(resourceName: "defaultImage")) // this may crash b/c of xcode https://teamtreehouse.com/community/when-i-enter-default-it-disappears-then-crashes
             }
         }
@@ -80,10 +85,6 @@ class GameManager {
             for car in cars.carList {
             //sending back all the options urls back in the users order.
                 if userOrder[counter].contains(car.carName) {
-                    print(userOrder[counter])
-                    print(car.carName)
-                    print(car.carYear)
-                    print(car.websiteUrl)
                     usersUrlOrder.append(car.websiteUrl)
                 }
             }
@@ -93,25 +94,17 @@ class GameManager {
     
     func checkAnswer(usersOrder: [String]) -> Bool {
         let usersOrder = usersOrder //order of the car names passed through
-        print(usersOrder) //correct so far
-        // sorts the options car years oldes-newst.
         var usersCarYearOrder:[Int] = [] //save the cars year that matches the cars name
       
         for counter in 0...(usersOrder.count-1) {
             for car in cars.carList {
             if usersOrder[counter].contains(car.carName) {
-                print(usersOrder[counter])
-                print(car.carName)
                 usersCarYearOrder.append(car.carYear)
-                print(car.carYear)
-                print(usersCarYearOrder)
                 }
             }
         }
         
         let correctOrder:[Int] = currentCarYears.sorted()
-        print(usersCarYearOrder)
-        print(cars.carList.count)
         if (usersCarYearOrder.elementsEqual(correctOrder)) {
             roundsCorrect += 1
             print("This is the correct order!!!!")

@@ -32,10 +32,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     var currentOptionsCopy:[String] = []
     var order:[Int] = []
     var userCarOrderByName:[String] = []
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePopUpView.layer.cornerRadius = 10
+        for button in imageButtons{
+            button.layer.cornerRadius = 5
+            button.clipsToBounds = true
+        }
+       
         newRound()
     }
 
@@ -47,16 +52,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     
     // Game set up
+    func newGame() {
+        gameManager.newGame()
+        newRound()
+    }
+    
     func newRound() {
         gameManager.newRound()
         //Hide some of the buttons
         changeButtonProperty(buttonsArray: optionButtons, status: false, actionToDo: "disable")
         changeButtonProperty(buttonsArray: navButtons, status: true, actionToDo: "enable")
         changeButtonProperty(buttonsArray: nextRoundButton, status: true, actionToDo: "hide")
-        //Start/Restart the timer
-        if timerIsRunning == false {
-            startTimer()
-        }
         // get the options for the new round
         let options = gameManager.getOptionText()
         //made temp copy to manipulate
@@ -64,6 +70,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         //This will be the default order for the button label, set up the labels
         order = [0,1,2,3]
         setOptions(order: order)
+        //Start/Restart the timer
+        if !(gameManager.round == gameManager.roundsPerGame) {//if its not the end of the game
+            if timerIsRunning == false { // and the timer is no already running - start it
+                startTimer()
+            }
+        }
     }
   
     func setOptions (order:[Int]) {
@@ -115,7 +127,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func checkResults() {
-        print("this is the users order before it gets passed to check results \(userCarOrderByName)") // this order is correct so far
         (gameManager.checkAnswer(usersOrder: userCarOrderByName)) ? (nextRoundButton[1].isHidden = false) : (nextRoundButton[0].isHidden = false)
     }
     
@@ -132,17 +143,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    // Enable/ Disable buttons
+    // Enable/ Disable button collections
     func changeButtonProperty(buttonsArray: [UIButton], status: Bool, actionToDo: String) {
         switch actionToDo {
-        case "enable", "disable":
-                                for button in buttonsArray {
-                                button.isEnabled = status
-                                }
-         case "hide", "show" :
-                                for button in buttonsArray {
+        case "enable", "disable":   for button in buttonsArray {
+                                    button.isEnabled = status
+                                    }
+         case "hide", "show" :      for button in buttonsArray {
                                     button.isHidden = status
-                                }
+                                    }
         default: print("could not preform actions on your buttons")
         }
     }
@@ -162,7 +171,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @objc func updateTimer() {
         //stop the timer from becomming negative
         if timeLeft < 1 { // cant put == 0 because if it glitches to -1 it will keep going.
-            //timer.invalidate()
             resetTimer()
         } else {
             timeLeft -= 1
@@ -177,23 +185,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         timerLabel.isHidden = true
         timerIsRunning = false
     }
-    
-    
+
     //Button Actions
     //popUp Button Actions
     @IBAction func imagePopOver(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            popUpImage.image = imageButtons[0].currentImage
-        case 1:
-            popUpImage.image = imageButtons[1].currentImage
-        case 2:
-            popUpImage.image = imageButtons[2].currentImage
-        case 3:
-            popUpImage.image = imageButtons[3].currentImage
-        default:
-            popUpImage.image = UIImage(named: "defaultImageLarge.png")
-        }
+        popUpImage.image = imageButtons[sender.tag].currentImage
         self.view.addSubview(imagePopUpView)
         imagePopUpView.center = self.view.center
     }
@@ -201,6 +197,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func imageCloseButton(_ sender: UIButton) {
         self.imagePopUpView.removeFromSuperview()
     }
+    
     //ViewController Button Actions
     @IBAction func navButton(_ sender: UIButton) {
         //Switch to handle text population
@@ -221,12 +218,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func nextRound(_ sender: UIButton) {
         let gameOver = gameManager.checkGameOver()
-        gameOver ? (performSegue(withIdentifier: "resultViewSegue", sender: self)) : newRound()
+        gameOver ? (performSegue(withIdentifier: "resultViewSegue", sender: self)) : (newRound())
     }
-
+    
+    @IBAction func unwindToPlayAgain(segue:UIStoryboardSegue) {
+        newGame()
+    }
+    
     @IBAction func showMoreInfoScreen(_ sender: UIButton) {
         let userUrlOrder = gameManager.setUrl(userOrder: userCarOrderByName)
-        print(userUrlOrder)
         switch sender.tag {
         case 4: showOptionRerence(url: userUrlOrder[0])
         case 5: showOptionRerence(url: userUrlOrder[1])
