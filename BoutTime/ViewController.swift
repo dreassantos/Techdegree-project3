@@ -157,7 +157,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     //timer functions
-    var timeLeft = 10
+    var timeLeft = 60
     var timer = Timer()
     var timerIsRunning = false
     
@@ -180,7 +180,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func resetTimer(){
         timer.invalidate()
-        timeLeft = 10
+        timeLeft = 60
         endRound()
         timerLabel.isHidden = true
         timerIsRunning = false
